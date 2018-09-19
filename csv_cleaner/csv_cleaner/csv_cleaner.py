@@ -9,7 +9,6 @@ class CsvClean:
             self.path = os.getcwd()
         self.path += '/'
         if file is not None:
-                
             self.file = file
             self.new_filename = 'new_' + self.file
         else:

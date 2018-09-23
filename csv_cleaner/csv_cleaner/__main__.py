@@ -5,11 +5,15 @@ import os
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         c = CsvClean()
-    elif len(sys.argv) < 3 and '.csv' not in sys.argv[1] or 'xlsx' not in sys.argv[1]:
+        print('printed option 1')
+    elif len(sys.argv) < 3 and '.csv' not in sys.argv[1] or len(sys.argv) < 3 and 'xlsx' not in sys.argv[1]:
         c = CsvClean(sys.argv[1])
-    elif len(sys.argv) < 3 and '.csv' in sys.argv[1] or '.xlsx' in sys.argv[1]:
-        c = CsvClean(file = sys.argv[1])
+        print('printed option 2')
+    elif len(sys.argv) < 3 and '.csv' in sys.argv[1] or len(sys.argv) < 3 and '.xlsx' in sys.argv[1]:
+        c = CsvClean(file = sys.argv[2])
+        print('printed option 3')
     else:
         c = CsvClean(sys.argv[1], sys.argv[2])
+        print('printed option 4')
     
     c.clean()
